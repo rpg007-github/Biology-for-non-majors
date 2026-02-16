@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biology for Non-Majors — Essential Study Reference</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f5f7fa;--bg-card:#fff;--text:#2c2c2c;--text-muted:#6b6b6b;--accent:#4a6fa5;--accent-dark:#36537d;--accent-light:#e8eff8;--border:#d5dbe3;--border-light:#edf0f4;--highlight:#fef8e6;--highlight-border:#e8c84a;--mnemonic-bg:#edf7ee;--mnemonic-border:#6bbd72;--formula-bg:#e8eff8;--formula-border:#7a9ec9;--shadow:0 1px 3px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.04);--shadow-hover:0 2px 8px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.06)}
+    *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(135deg,#1e3252 0%,#4a6fa5 40%,#6b8fc4 100%);color:#fff;padding:4rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}.hero h1{font-family:'Crimson Pro',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.02em;position:relative}.hero .subtitle{font-size:1.15rem;opacity:.85;margin-top:.5rem;font-weight:300;position:relative}.hero .tagline{display:inline-block;margin-top:1rem;background:rgba(255,255,255,.15);padding:.35rem 1.2rem;border-radius:20px;font-size:.85rem;font-weight:500;letter-spacing:.03em;position:relative}
+    .container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem 4rem}.toc{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:2.5rem;box-shadow:var(--shadow)}.toc h2{font-family:'Crimson Pro',serif;font-size:1.5rem;color:var(--accent);margin-bottom:1rem;font-weight:600}.toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.5rem}.toc-grid a{display:block;padding:.5rem .75rem;color:var(--text);text-decoration:none;border-radius:6px;font-size:.95rem;transition:all .2s}.toc-grid a:hover{background:var(--accent-light);color:var(--accent)}.toc-grid a .toc-num{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);margin-right:.5rem;font-weight:500}
+    .section-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2rem 2rem 1.75rem;margin-bottom:2rem;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}.section-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}.section-card h2{font-family:'Crimson Pro',serif;font-size:1.6rem;color:var(--accent);margin-bottom:.25rem;font-weight:600;display:flex;align-items:center;gap:.6rem}.section-card h2 .sec-num{font-family:'JetBrains Mono',monospace;font-size:.75rem;background:var(--accent);color:#fff;padding:.15rem .55rem;border-radius:4px;font-weight:500}.section-card h3{font-family:'Crimson Pro',serif;font-size:1.2rem;color:var(--accent-dark);margin:1.4rem 0 .5rem;font-weight:600}.section-card p{margin-bottom:.8rem;line-height:1.75}
+    .fact-table{width:100%;border-collapse:collapse;margin:1rem 0 1.25rem;font-size:.92rem}.fact-table th{background:var(--accent);color:#fff;padding:.6rem .8rem;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.03em}.fact-table th:first-child{border-radius:6px 0 0 0}.fact-table th:last-child{border-radius:0 6px 0 0}.fact-table td{padding:.55rem .8rem;border-bottom:1px solid var(--border-light)}.fact-table tr:nth-child(even) td{background:#f3f5f9}.fact-table tr:hover td{background:var(--accent-light)}.fact-table code{font-family:'JetBrains Mono',monospace;font-size:.85rem;background:var(--formula-bg);padding:.1rem .4rem;border-radius:3px}
+    .formula-box{background:var(--formula-bg);border-left:4px solid var(--formula-border);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 8px 8px 0}.formula-box .formula-label{font-family:'Crimson Pro',serif;font-weight:600;color:var(--accent-dark);font-size:.9rem;margin-bottom:.3rem}.formula-box code{font-family:'JetBrains Mono',monospace;font-size:.95rem;display:block;margin-top:.3rem}
+    .mnemonic-box{background:var(--mnemonic-bg);border-left:4px solid var(--mnemonic-border);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 8px 8px 0}.mnemonic-box .mnemonic-label{font-family:'Crimson Pro',serif;font-weight:600;color:#2d7a36;font-size:.9rem;margin-bottom:.3rem}
+    .highlight-box{background:var(--highlight);border-left:4px solid var(--highlight-border);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 8px 8px 0}.highlight-box strong{color:#8a6d0b}
+    .interactive-section{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:2rem;box-shadow:var(--shadow)}.interactive-section h2{font-family:'Crimson Pro',serif;font-size:1.6rem;color:var(--accent);margin-bottom:1rem;font-weight:600}
+    .quiz-progress{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;font-size:.9rem;color:var(--text-muted)}.quiz-progress-bar{flex:1;height:8px;background:var(--border-light);border-radius:4px;overflow:hidden}.quiz-progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width .4s;width:0}.quiz-score{font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--accent)}
+    .quiz-question p{font-weight:600;margin-bottom:.75rem;font-size:1.02rem}.quiz-options label{display:block;padding:.65rem 1rem;margin-bottom:.4rem;border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:.95rem}.quiz-options label:hover{background:var(--accent-light);border-color:var(--accent)}.quiz-options input[type="radio"]{margin-right:.6rem}.quiz-options label.correct{background:#e8f5e9;border-color:#4caf50}.quiz-options label.incorrect{background:#ffeef0;border-color:#e57373}.quiz-explanation{margin-top:.75rem;padding:.75rem 1rem;background:#edf1f8;border-radius:8px;font-size:.9rem;color:#555;display:none}
+    .quiz-btn{display:inline-block;padding:.6rem 1.5rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:.95rem;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-weight:500;transition:background .2s;margin-top:.5rem}.quiz-btn:hover{background:var(--accent-dark)}.quiz-nav{display:flex;gap:.75rem;margin-top:1rem}.quiz-result{text-align:center;padding:2rem}.quiz-result h3{font-family:'Crimson Pro',serif;font-size:1.8rem;color:var(--accent);margin-bottom:.5rem}
+    .fc-filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}.fc-filter-btn{padding:.4rem 1rem;border:1px solid var(--border);background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:all .2s}.fc-filter-btn:hover{border-color:var(--accent);color:var(--accent)}.fc-filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .fc-container{display:flex;flex-direction:column;align-items:center}.fc-card-wrapper{width:100%;max-width:500px;height:300px;perspective:1200px;margin-bottom:1rem;cursor:pointer}.fc-card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .6s}.fc-card.flipped{transform:rotateY(180deg)}.fc-front,.fc-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem;text-align:center}.fc-front{background:linear-gradient(135deg,var(--accent-light),#dce6f3);border:2px solid var(--accent)}.fc-front .fc-category{position:absolute;top:1rem;left:1rem;font-size:.75rem;font-family:'JetBrains Mono',monospace;background:var(--accent);color:#fff;padding:.15rem .6rem;border-radius:4px}.fc-front p{font-family:'Crimson Pro',serif;font-size:1.25rem;font-weight:600;color:var(--accent-dark)}.fc-back{background:var(--accent);color:#fff;transform:rotateY(180deg)}.fc-back p{font-size:1.05rem;line-height:1.6}.fc-controls{display:flex;align-items:center;gap:1rem}.fc-nav-btn{padding:.5rem 1.2rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:.9rem;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:background .2s}.fc-nav-btn:hover{background:var(--accent-dark)}.fc-counter{font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--text-muted)}
+    .sa-question{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-light)}.sa-question:last-child{border-bottom:none}.sa-question p.sa-prompt{font-weight:600;margin-bottom:.75rem;font-size:1.02rem}.sa-question textarea{width:100%;min-height:80px;padding:.75rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:.95rem;resize:vertical;transition:border-color .2s}.sa-question textarea:focus{outline:none;border-color:var(--accent)}.sa-feedback{margin-top:.75rem;display:none}.sa-score-bar{height:10px;background:var(--border-light);border-radius:5px;overflow:hidden;margin-bottom:.6rem}.sa-score-fill{height:100%;border-radius:5px;transition:width .5s}.sa-score-text{font-family:'JetBrains Mono',monospace;font-size:.85rem;margin-bottom:.5rem}.sa-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem}.sa-tag{padding:.2rem .65rem;border-radius:4px;font-size:.8rem;font-weight:500}.sa-tag.hit{background:#e8f5e9;color:#2e7d32}.sa-tag.miss{background:#f0f0f0;color:#888}.sa-model-toggle{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.9rem;font-family:'Source Sans 3',sans-serif;font-weight:500;padding:0}.sa-model-toggle:hover{text-decoration:underline}.sa-model-answer{margin-top:.5rem;padding:.75rem 1rem;background:#edf1f8;border-radius:8px;font-size:.9rem;display:none;line-height:1.65}
+    .back-to-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);opacity:0;transition:opacity .3s;z-index:100}.back-to-top.visible{opacity:1}
+    @media(max-width:768px){.container{padding:1.25rem 1rem 3rem}.section-card{padding:1.5rem}.toc-grid{grid-template-columns:1fr}.fact-table{font-size:.85rem}.fact-table th,.fact-table td{padding:.4rem .5rem}.fc-card-wrapper{height:260px}}
+  </style>
+</head>
+<body>
+<div class="hero"><h1>Biology for Non-Majors</h1><div class="subtitle">Essential Study Reference</div><div class="tagline">The facts you just know</div></div>
+<div class="container">
+<div class="toc"><h2>Table of Contents</h2><div class="toc-grid">
+  <a href="#sci-method"><span class="toc-num">01</span>Science &amp; the Scientific Method</a>
+  <a href="#chemistry"><span class="toc-num">02</span>Chemistry of Life</a>
+  <a href="#cells"><span class="toc-num">03</span>Cells &amp; Cell Membranes</a>
+  <a href="#energy"><span class="toc-num">04</span>Energy: Photosynthesis &amp; Respiration</a>
+  <a href="#dna"><span class="toc-num">05</span>DNA, Genes &amp; Protein Synthesis</a>
+  <a href="#cell-division"><span class="toc-num">06</span>Cell Division &amp; Reproduction</a>
+  <a href="#genetics"><span class="toc-num">07</span>Genetics &amp; Heredity</a>
+  <a href="#evolution"><span class="toc-num">08</span>Evolution &amp; Natural Selection</a>
+  <a href="#ecology"><span class="toc-num">09</span>Ecology &amp; the Environment</a>
+  <a href="#human-body"><span class="toc-num">10</span>Human Body Systems Overview</a>
+  <a href="#quiz"><span class="toc-num">Q</span>Multiple Choice Quiz</a>
+  <a href="#flashcards"><span class="toc-num">F</span>Flashcards</a>
+  <a href="#short-answer"><span class="toc-num">SA</span>Short Answer Practice</a>
+</div></div>
+
+<!-- 01 -->
+<div class="section-card" id="sci-method"><h2><span class="sec-num">01</span>Science &amp; the Scientific Method</h2>
+<p>Science is a systematic way of learning about the natural world through observation and experimentation. The scientific method is the process scientists use to investigate questions.</p>
+<p>The process begins with an observation that sparks a question. A hypothesis is a testable, falsifiable prediction (often "if...then"). An experiment tests the hypothesis under controlled conditions. Data are collected and analyzed, and a conclusion is drawn. The hypothesis is either supported or rejected, never "proven."</p>
+<table class="fact-table"><tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Hypothesis</td><td>Testable, falsifiable prediction</td></tr>
+<tr><td>Theory</td><td>Well-tested explanation supported by extensive evidence (e.g., evolution, cell theory)</td></tr>
+<tr><td>Law</td><td>Statement describing a consistent pattern in nature (e.g., gravity)</td></tr>
+<tr><td>Independent variable</td><td>What the experimenter changes</td></tr>
+<tr><td>Dependent variable</td><td>What is measured in response</td></tr>
+<tr><td>Control group</td><td>No treatment; provides baseline for comparison</td></tr></table>
+<div class="highlight-box"><strong>A theory is not "just a guess."</strong> In science, a theory is the highest level of confidence: a broad explanation supported by extensive, repeated evidence.</div></div>
+
+<!-- 02 -->
+<div class="section-card" id="chemistry"><h2><span class="sec-num">02</span>Chemistry of Life</h2>
+<p>All living things are made of atoms organized into molecules. Understanding basic chemistry helps explain how cells function, how food provides energy, and how DNA stores information.</p>
+<h3>Atoms &amp; Bonds</h3>
+<p>Atoms have protons (+) and neutrons (0) in the nucleus, with electrons (-) orbiting outside. Covalent bonds share electrons (common in biological molecules). Ionic bonds transfer electrons (like NaCl). Hydrogen bonds are weak but critically important in biology, holding water molecules together and stabilizing DNA's double helix.</p>
+<h3>Water</h3>
+<p>Water is polar (unequal charge distribution), making it an excellent solvent for polar and ionic substances. Water's key properties: high specific heat (resists temperature change, stabilizes climate and body temp), cohesion (water sticks to water, surface tension), adhesion (water sticks to other surfaces, helps plants pull water up), and ice floats (less dense than liquid water, insulating aquatic ecosystems).</p>
+<h3>The Four Macromolecules</h3>
+<table class="fact-table"><tr><th>Macromolecule</th><th>Building Block</th><th>Function</th><th>Examples</th></tr>
+<tr><td>Carbohydrates</td><td>Monosaccharides</td><td>Quick energy, structure</td><td>Glucose, starch, cellulose</td></tr>
+<tr><td>Lipids</td><td>Fatty acids + glycerol</td><td>Long-term energy, membranes, insulation</td><td>Fats, oils, phospholipids</td></tr>
+<tr><td>Proteins</td><td>Amino acids</td><td>Enzymes, structure, transport, defense</td><td>Hemoglobin, antibodies, collagen</td></tr>
+<tr><td>Nucleic acids</td><td>Nucleotides</td><td>Genetic information</td><td>DNA, RNA</td></tr></table>
+<div class="mnemonic-box"><div class="mnemonic-label">Building and Breaking</div><strong>Dehydration synthesis</strong> joins monomers by removing water. <strong>Hydrolysis</strong> breaks polymers by adding water.</div>
+<h3>Enzymes</h3>
+<p>Enzymes are proteins that speed up reactions by lowering activation energy. Each is specific to its substrate (lock-and-key model). Enzymes are reusable and not consumed. Extreme temperature or pH can denature an enzyme, destroying its shape and function.</p></div>
+
+<!-- 03 -->
+<div class="section-card" id="cells"><h2><span class="sec-num">03</span>Cells &amp; Cell Membranes</h2>
+<p>The cell is the basic unit of life. Cell theory: all living things are made of cells, cells are the basic unit of structure and function, and all cells come from pre-existing cells.</p>
+<h3>Prokaryotic vs. Eukaryotic</h3>
+<table class="fact-table"><tr><th>Feature</th><th>Prokaryotic</th><th>Eukaryotic</th></tr>
+<tr><td>Nucleus</td><td>No (DNA in nucleoid)</td><td>Yes (membrane-bound)</td></tr>
+<tr><td>Size</td><td>Small (1-10 &mu;m)</td><td>Larger (10-100 &mu;m)</td></tr>
+<tr><td>Organelles</td><td>No membrane-bound</td><td>Many</td></tr>
+<tr><td>Examples</td><td>Bacteria, archaea</td><td>Plants, animals, fungi, protists</td></tr></table>
+<h3>Key Organelles</h3>
+<table class="fact-table"><tr><th>Organelle</th><th>Function</th><th>Analogy</th></tr>
+<tr><td>Nucleus</td><td>Contains DNA; control center</td><td>Brain / main office</td></tr>
+<tr><td>Ribosome</td><td>Makes proteins</td><td>Factory worker</td></tr>
+<tr><td>Mitochondria</td><td>Produces ATP (cell respiration)</td><td>Power plant</td></tr>
+<tr><td>Chloroplast</td><td>Photosynthesis (plants only)</td><td>Solar panel</td></tr>
+<tr><td>Cell membrane</td><td>Controls what enters/exits</td><td>Security gate</td></tr>
+<tr><td>ER (rough/smooth)</td><td>Rough: protein processing. Smooth: lipid synthesis</td><td>Assembly line</td></tr>
+<tr><td>Golgi apparatus</td><td>Packages and ships proteins</td><td>Post office</td></tr>
+<tr><td>Lysosome</td><td>Digests waste</td><td>Recycling center</td></tr>
+<tr><td>Cell wall</td><td>Rigid support (plants, fungi, bacteria)</td><td>Outer wall</td></tr></table>
+<h3>Membrane &amp; Transport</h3>
+<p>The cell membrane is a phospholipid bilayer: hydrophilic heads face water, hydrophobic tails face inward. It is selectively permeable.</p>
+<table class="fact-table"><tr><th>Type</th><th>Energy?</th><th>Direction</th><th>Example</th></tr>
+<tr><td>Diffusion</td><td>No</td><td>High &rarr; low concentration</td><td>O&#8322; into cells</td></tr>
+<tr><td>Osmosis</td><td>No</td><td>Water toward higher solute</td><td>Water entering a cell</td></tr>
+<tr><td>Active transport</td><td>Yes (ATP)</td><td>Low &rarr; high (against gradient)</td><td>Na+/K+ pump</td></tr></table>
+<div class="formula-box"><div class="formula-label">Tonicity</div><code>Hypotonic: cell swells (water in). Isotonic: no net change. Hypertonic: cell shrinks (water out).</code></div></div>
+
+<!-- 04 -->
+<div class="section-card" id="energy"><h2><span class="sec-num">04</span>Energy: Photosynthesis &amp; Respiration</h2>
+<p>Energy enters ecosystems through photosynthesis and is released for cell use through cellular respiration. These processes are essentially the reverse of each other.</p>
+<div class="formula-box"><div class="formula-label">Photosynthesis</div><code>6CO&#8322; + 6H&#8322;O + sunlight &rarr; C&#8326;H&#8321;&#8322;O&#8326; + 6O&#8322;</code><br><br>Occurs in chloroplasts. Captures light energy and stores it as glucose. O&#8322; is released.</div>
+<div class="formula-box"><div class="formula-label">Cellular Respiration</div><code>C&#8326;H&#8321;&#8322;O&#8326; + 6O&#8322; &rarr; 6CO&#8322; + 6H&#8322;O + ATP</code><br><br>Occurs in mitochondria. Breaks glucose to release ~36-38 ATP. Three stages: glycolysis (cytoplasm, 2 ATP), Krebs cycle (matrix, 2 ATP), ETC (inner membrane, ~34 ATP).</div>
+<h3>Fermentation</h3>
+<p>Without O&#8322;, cells use fermentation (only 2 ATP). Alcoholic fermentation (yeast): ethanol + CO&#8322;. Lactic acid fermentation (muscles): lactic acid.</p>
+<div class="mnemonic-box"><div class="mnemonic-label">Key Relationship</div><strong>Photosynthesis stores energy; respiration releases it.</strong> The products of one are the reactants of the other. Together they cycle carbon and oxygen through ecosystems.</div></div>
+
+<!-- 05 -->
+<div class="section-card" id="dna"><h2><span class="sec-num">05</span>DNA, Genes &amp; Protein Synthesis</h2>
+<p>DNA stores genetic information in all living things. It determines what proteins a cell makes, and proteins do most of the work.</p>
+<h3>DNA Structure</h3>
+<p>DNA is a double helix of nucleotides (phosphate + deoxyribose sugar + base). Bases pair by complementary rules: A-T, G-C. In RNA, uracil (U) replaces thymine: A-U, G-C.</p>
+<div class="mnemonic-box"><div class="mnemonic-label">Base Pairing</div><strong>A-T, G-C.</strong> "Apples in the Tree, Cars in the Garage."</div>
+<h3>Central Dogma: DNA &rarr; RNA &rarr; Protein</h3>
+<table class="fact-table"><tr><th>Step</th><th>Process</th><th>Where</th><th>What Happens</th></tr>
+<tr><td>1</td><td>Replication</td><td>Nucleus</td><td>DNA copies itself before cell division</td></tr>
+<tr><td>2</td><td>Transcription</td><td>Nucleus</td><td>DNA template &rarr; mRNA copy</td></tr>
+<tr><td>3</td><td>Translation</td><td>Ribosome</td><td>mRNA read &rarr; amino acids assembled into protein</td></tr></table>
+<p>A gene is a DNA section coding for a protein. A codon is a 3-base mRNA sequence coding for one amino acid. Start codon: AUG. Stop codons: UAA, UAG, UGA. Mutations are DNA sequence changes that may alter the protein.</p></div>
+
+<!-- 06 -->
+<div class="section-card" id="cell-division"><h2><span class="sec-num">06</span>Cell Division &amp; Reproduction</h2>
+<h3>Mitosis</h3>
+<p>Produces 2 genetically identical diploid (2n) daughter cells. Used for growth and repair. Phases: prophase, metaphase, anaphase, telophase (PMAT), then cytokinesis.</p>
+<h3>Meiosis</h3>
+<p>Produces 4 genetically unique haploid (n) cells (gametes). Two rounds of division. Occurs only in reproductive organs.</p>
+<table class="fact-table"><tr><th>Feature</th><th>Mitosis</th><th>Meiosis</th></tr>
+<tr><td>Purpose</td><td>Growth, repair</td><td>Gamete production</td></tr>
+<tr><td>Divisions</td><td>1</td><td>2</td></tr>
+<tr><td>Daughter cells</td><td>2, identical, diploid</td><td>4, unique, haploid</td></tr>
+<tr><td>Genetic variation</td><td>None</td><td>Yes</td></tr></table>
+<div class="highlight-box"><strong>Genetic variation in meiosis</strong> comes from crossing over (prophase I), independent assortment (metaphase I), and random fertilization.</div></div>
+
+<!-- 07 -->
+<div class="section-card" id="genetics"><h2><span class="sec-num">07</span>Genetics &amp; Heredity</h2>
+<p>Genetics is the study of how traits are passed from parents to offspring. Gregor Mendel discovered the basic rules using pea plants.</p>
+<h3>Key Vocabulary</h3>
+<table class="fact-table"><tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Gene</td><td>Segment of DNA coding for a trait</td></tr>
+<tr><td>Allele</td><td>Different versions of a gene (e.g., T for tall, t for short)</td></tr>
+<tr><td>Dominant</td><td>Allele expressed when one or two copies present (T)</td></tr>
+<tr><td>Recessive</td><td>Allele expressed only when two copies present (tt)</td></tr>
+<tr><td>Homozygous</td><td>Two identical alleles (TT or tt)</td></tr>
+<tr><td>Heterozygous</td><td>Two different alleles (Tt)</td></tr>
+<tr><td>Genotype</td><td>The allele combination (TT, Tt, tt)</td></tr>
+<tr><td>Phenotype</td><td>The observable trait (tall, short)</td></tr></table>
+<h3>Punnett Squares</h3>
+<p>A Punnett square predicts the probability of offspring genotypes and phenotypes. A monohybrid cross (Tt x Tt) gives a 3:1 phenotypic ratio (3 dominant : 1 recessive) and a 1:2:1 genotypic ratio.</p>
+<h3>Beyond Simple Dominance</h3>
+<table class="fact-table"><tr><th>Pattern</th><th>What Happens</th><th>Example</th></tr>
+<tr><td>Incomplete dominance</td><td>Heterozygote is a blend</td><td>Red x White = Pink</td></tr>
+<tr><td>Codominance</td><td>Both alleles fully expressed</td><td>AB blood type</td></tr>
+<tr><td>Sex-linked traits</td><td>Gene on X chromosome</td><td>Color blindness, hemophilia</td></tr>
+<tr><td>Polygenic traits</td><td>Multiple genes affect one trait</td><td>Skin color, height</td></tr></table>
+<div class="highlight-box"><strong>Blood type</strong> is a classic genetics example. A and B are codominant to each other, and both are dominant over O. Genotypes: AA or AO = type A, BB or BO = type B, AB = type AB, OO = type O.</div></div>
+
+<!-- 08 -->
+<div class="section-card" id="evolution"><h2><span class="sec-num">08</span>Evolution &amp; Natural Selection</h2>
+<p>Evolution is the change in allele frequencies in a population over time. It is the unifying theme of all biology. Natural selection is the primary mechanism of evolution.</p>
+<h3>How Natural Selection Works</h3>
+<p>Four conditions must be present: variation exists in the population, some of that variation is heritable (genetic), more offspring are produced than can survive (overproduction), and individuals with advantageous traits survive and reproduce more (differential reproduction). Over generations, favorable traits become more common.</p>
+<div class="highlight-box"><strong>Natural selection acts on phenotypes, not genotypes.</strong> Individuals do not evolve. Populations evolve. The environment determines which traits are advantageous.</div>
+<h3>Evidence for Evolution</h3>
+<table class="fact-table"><tr><th>Evidence</th><th>Explanation</th></tr>
+<tr><td>Fossil record</td><td>Shows change over time; transitional forms</td></tr>
+<tr><td>Comparative anatomy</td><td>Homologous structures (same structure, different function) indicate common ancestry</td></tr>
+<tr><td>Embryology</td><td>Similar early development across species</td></tr>
+<tr><td>Molecular biology</td><td>DNA/protein similarity correlates with relatedness</td></tr>
+<tr><td>Biogeography</td><td>Species distribution matches evolutionary predictions</td></tr></table>
+<h3>Other Key Concepts</h3>
+<table class="fact-table"><tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Adaptation</td><td>A trait that improves an organism's fitness in its environment</td></tr>
+<tr><td>Speciation</td><td>Formation of a new species, usually from geographic isolation + divergence</td></tr>
+<tr><td>Genetic drift</td><td>Random changes in allele frequency, most significant in small populations</td></tr>
+<tr><td>Homologous structures</td><td>Same anatomy, different function (common ancestor)</td></tr>
+<tr><td>Analogous structures</td><td>Different anatomy, same function (convergent evolution)</td></tr></table></div>
+
+<!-- 09 -->
+<div class="section-card" id="ecology"><h2><span class="sec-num">09</span>Ecology &amp; the Environment</h2>
+<p>Ecology is the study of how organisms interact with each other and their environment. It spans from individual organisms to the entire biosphere.</p>
+<h3>Levels of Organization</h3>
+<p>Organism &rarr; population (same species, same area) &rarr; community (all species in an area) &rarr; ecosystem (community + physical environment) &rarr; biome (large region with similar climate/organisms) &rarr; biosphere (all life on Earth).</p>
+<h3>Energy Flow</h3>
+<p>Energy enters ecosystems as sunlight and flows one direction: producers &rarr; primary consumers &rarr; secondary consumers &rarr; tertiary consumers. Only about 10% of energy transfers between trophic levels; 90% is lost as heat. This is why food chains are typically short (4-5 levels).</p>
+<table class="fact-table"><tr><th>Trophic Level</th><th>Role</th><th>Example</th></tr>
+<tr><td>Producer</td><td>Makes own food (autotroph)</td><td>Plants, algae</td></tr>
+<tr><td>Primary consumer</td><td>Eats producers (herbivore)</td><td>Rabbit, grasshopper</td></tr>
+<tr><td>Secondary consumer</td><td>Eats primary consumers</td><td>Frog, snake</td></tr>
+<tr><td>Decomposer</td><td>Breaks down dead matter, recycles nutrients</td><td>Bacteria, fungi</td></tr></table>
+<h3>Species Interactions</h3>
+<table class="fact-table"><tr><th>Interaction</th><th>Effect</th><th>Example</th></tr>
+<tr><td>Mutualism</td><td>+/+</td><td>Bee and flower</td></tr>
+<tr><td>Commensalism</td><td>+/0</td><td>Barnacle on whale</td></tr>
+<tr><td>Parasitism</td><td>+/-</td><td>Tick on deer</td></tr>
+<tr><td>Competition</td><td>-/-</td><td>Two species, same niche</td></tr>
+<tr><td>Predation</td><td>+/-</td><td>Lion eats zebra</td></tr></table>
+<h3>Population Growth &amp; Carrying Capacity</h3>
+<p>Exponential growth (J-curve) occurs with unlimited resources. Logistic growth (S-curve) levels off at carrying capacity (K), the maximum population an environment can sustain. Density-dependent factors (competition, disease, predation) intensify as population grows. Density-independent factors (fire, flood, drought) affect populations regardless of size.</p>
+<h3>Human Impact</h3>
+<p>Major environmental concerns include habitat destruction (the leading cause of species loss), climate change (rising CO&#8322; from burning fossil fuels traps heat), pollution, overexploitation of resources, and invasive species. Biodiversity is critical for ecosystem stability and resilience.</p></div>
+
+<!-- 10 -->
+<div class="section-card" id="human-body"><h2><span class="sec-num">10</span>Human Body Systems Overview</h2>
+<p>The human body is organized into organ systems that work together to maintain homeostasis, the stable internal environment necessary for survival.</p>
+<table class="fact-table"><tr><th>System</th><th>Major Organs</th><th>Key Function</th></tr>
+<tr><td>Integumentary</td><td>Skin, hair, nails</td><td>Protection, temperature regulation, sensation</td></tr>
+<tr><td>Skeletal</td><td>Bones, cartilage, joints</td><td>Support, protection, movement, blood cell production</td></tr>
+<tr><td>Muscular</td><td>Skeletal, smooth, cardiac muscle</td><td>Movement, posture, heat generation</td></tr>
+<tr><td>Nervous</td><td>Brain, spinal cord, nerves</td><td>Rapid signaling, sensation, coordination, thought</td></tr>
+<tr><td>Endocrine</td><td>Glands (pituitary, thyroid, adrenals, pancreas)</td><td>Hormone production for slow, long-lasting regulation</td></tr>
+<tr><td>Cardiovascular</td><td>Heart, blood vessels, blood</td><td>Transports O&#8322;, nutrients, waste, hormones</td></tr>
+<tr><td>Respiratory</td><td>Lungs, trachea, diaphragm</td><td>Gas exchange: O&#8322; in, CO&#8322; out</td></tr>
+<tr><td>Digestive</td><td>Mouth, stomach, intestines, liver, pancreas</td><td>Break down food, absorb nutrients</td></tr>
+<tr><td>Urinary</td><td>Kidneys, bladder, ureters</td><td>Filter blood, remove waste, regulate water/salt</td></tr>
+<tr><td>Immune/Lymphatic</td><td>White blood cells, lymph nodes, spleen</td><td>Defense against pathogens</td></tr>
+<tr><td>Reproductive</td><td>Ovaries/testes, uterus</td><td>Produce gametes, support offspring development</td></tr></table>
+<div class="highlight-box"><strong>Homeostasis</strong> is maintained through negative feedback loops. A sensor detects a change, a control center processes the information, and an effector responds to restore the set point. Example: body temperature rises &rarr; brain signals sweat glands &rarr; sweating cools the body back down.</div>
+<h3>Immune System Basics</h3>
+<p>Innate immunity is nonspecific (skin, mucus, inflammation, fever). Adaptive immunity is specific and involves lymphocytes: B cells produce antibodies, and T cells destroy infected cells. Vaccines expose the immune system to a harmless form of a pathogen so it can build memory cells for faster future responses.</p></div>
+
+<!-- INTERACTIVE -->
+<div class="interactive-section" id="quiz"><h2>Multiple Choice Quiz</h2>
+<div class="quiz-progress"><span>Question <span id="qCur">1</span> of <span id="qTot">30</span></span><div class="quiz-progress-bar"><div class="quiz-progress-fill" id="qBar"></div></div><span class="quiz-score">Score: <span id="qScore">0</span></span></div>
+<div id="qArea"></div><div class="quiz-nav"><button class="quiz-btn" id="qSubmit" onclick="qCheck()">Check Answer</button><button class="quiz-btn" id="qNext" onclick="qAdvance()" style="display:none">Next Question</button></div></div>
+
+<div class="interactive-section" id="flashcards"><h2>Flashcards</h2><div class="fc-filters" id="fcFilters"></div>
+<div class="fc-container"><div class="fc-card-wrapper" onclick="fcFlip()"><div class="fc-card" id="fcCard"><div class="fc-front"><span class="fc-category" id="fcCat"></span><p id="fcQ"></p></div><div class="fc-back"><p id="fcA"></p></div></div></div>
+<div class="fc-controls"><button class="fc-nav-btn" onclick="fcPrev()">&larr; Prev</button><span class="fc-counter"><span id="fcIdx">1</span> / <span id="fcTot">0</span></span><button class="fc-nav-btn" onclick="fcNext()">Next &rarr;</button></div></div></div>
+
+<div class="interactive-section" id="short-answer"><h2>Short Answer Practice</h2><p style="color:var(--text-muted);margin-bottom:1.5rem">Answer in your own words. The grader checks for key concepts, not exact wording.</p><div id="saArea"></div><button class="quiz-btn" onclick="saGradeAll()" style="margin-top:1rem">Grade All Answers</button></div>
+</div>
+<button class="back-to-top" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
+
+<script>
+const QD=[
+{q:"In science, a theory is:",o:["An untested guess","The same as a hypothesis","A well-supported explanation backed by extensive evidence","Less reliable than a hypothesis"],a:2,e:"A scientific theory is supported by a large body of evidence from many experiments. It is the highest level of confidence in science."},
+{q:"The dependent variable in an experiment is:",o:["What you keep the same","What you intentionally change","What you measure in response","The control group"],a:2,e:"The dependent variable responds to changes in the independent variable. It is what you observe or measure."},
+{q:"Which macromolecule serves as the primary quick energy source?",o:["Lipids","Proteins","Carbohydrates","Nucleic acids"],a:2,e:"Carbohydrates (like glucose) are the body's preferred quick energy source. Lipids store long-term energy."},
+{q:"Enzymes speed up reactions by:",o:["Raising the temperature","Lowering the activation energy","Changing the products","Adding more substrate"],a:1,e:"Enzymes are biological catalysts that lower the activation energy barrier, making reactions proceed faster."},
+{q:"Water's high specific heat means it:",o:["Freezes easily","Resists temperature changes","Cannot dissolve salts","Evaporates quickly"],a:1,e:"High specific heat means water absorbs a lot of heat before its temperature rises, stabilizing body and environmental temperatures."},
+{q:"Which organelle is the 'powerhouse of the cell'?",o:["Nucleus","Ribosome","Mitochondria","Chloroplast"],a:2,e:"Mitochondria perform cellular respiration, converting glucose into ATP, the energy currency of cells."},
+{q:"The cell membrane is best described as:",o:["A rigid wall","A selectively permeable phospholipid bilayer","Fully permeable to all molecules","Made entirely of protein"],a:1,e:"The membrane is a phospholipid bilayer that controls what enters and exits the cell (selectively permeable)."},
+{q:"In a hypertonic solution, an animal cell will:",o:["Swell and burst","Stay the same","Shrink (crenate)","Divide"],a:2,e:"Hypertonic = more solute outside, so water leaves the cell by osmosis, causing it to shrink."},
+{q:"Photosynthesis occurs in:",o:["Mitochondria","Ribosomes","Chloroplasts","The nucleus"],a:2,e:"Chloroplasts contain chlorophyll and are the site of photosynthesis in plants and algae."},
+{q:"The products of photosynthesis are:",o:["CO2 and water","Glucose and oxygen","ATP only","Lactic acid"],a:1,e:"6CO2 + 6H2O + light -> C6H12O6 + 6O2. Glucose and oxygen are the products."},
+{q:"Cellular respiration produces about how many ATP per glucose?",o:["2","4","36-38","100"],a:2,e:"Total: ~36-38 ATP (2 from glycolysis, 2 from Krebs, ~34 from ETC)."},
+{q:"Fermentation occurs when:",o:["Oxygen is abundant","Oxygen is absent","The cell has too much ATP","Only in plants"],a:1,e:"Without oxygen, cells use fermentation to regenerate NAD+ and continue making 2 ATP via glycolysis."},
+{q:"DNA base pairing rules are:",o:["A-G, T-C","A-C, T-G","A-T, G-C","A-U, G-C"],a:2,e:"In DNA: adenine pairs with thymine, guanine pairs with cytosine. In RNA, uracil replaces thymine (A-U)."},
+{q:"Transcription produces:",o:["A copy of DNA","mRNA from a DNA template","Protein from mRNA","tRNA"],a:1,e:"Transcription reads DNA and produces a complementary mRNA strand in the nucleus."},
+{q:"A codon is:",o:["A three-base sequence on DNA","A three-base sequence on mRNA coding for one amino acid","A single nucleotide","An entire gene"],a:1,e:"Codons are three-base sequences on mRNA. Each codon specifies one amino acid during translation."},
+{q:"Mitosis results in:",o:["4 haploid cells","2 identical diploid cells","4 identical diploid cells","1 giant cell"],a:1,e:"Mitosis produces 2 genetically identical diploid daughter cells for growth and repair."},
+{q:"Meiosis is different from mitosis because it:",o:["Produces identical cells","Involves one division","Produces 4 haploid cells with genetic variation","Occurs in all body cells"],a:2,e:"Meiosis has 2 divisions, produces 4 unique haploid gametes, and introduces genetic variation."},
+{q:"In a cross of Tt x Tt, the expected phenotypic ratio is:",o:["1:1","1:2:1","3:1","4:0"],a:2,e:"3 dominant : 1 recessive phenotypic ratio (TT + 2Tt = dominant, tt = recessive)."},
+{q:"Incomplete dominance is shown when:",o:["One allele completely hides the other","The heterozygote shows a blended phenotype","Both alleles are equally visible","Traits skip generations"],a:1,e:"In incomplete dominance, the heterozygote is an intermediate blend (red x white = pink)."},
+{q:"Blood type AB is an example of:",o:["Complete dominance","Incomplete dominance","Codominance","Sex-linkage"],a:2,e:"In codominance, both A and B alleles are fully expressed in the heterozygote, giving type AB blood."},
+{q:"Natural selection requires all of the following EXCEPT:",o:["Variation in the population","Heritable traits","Equal survival of all individuals","Overproduction of offspring"],a:2,e:"Natural selection requires differential survival, not equal survival. Some individuals must be more fit than others."},
+{q:"Homologous structures indicate:",o:["Convergent evolution","Common ancestry","No evolutionary relationship","Analogous function"],a:1,e:"Homologous structures (e.g., whale flipper, human arm) have the same anatomy but different functions, indicating common ancestry."},
+{q:"The 10% rule in ecology means:",o:["10% of species are producers","90% of energy is passed on","Only 10% of energy transfers between trophic levels","Ecosystems lose 10% of their species yearly"],a:2,e:"~90% of energy is lost as heat at each level. Only ~10% passes to the next trophic level."},
+{q:"A relationship where both species benefit is:",o:["Parasitism","Competition","Mutualism","Commensalism"],a:2,e:"Mutualism = +/+. Both species benefit (e.g., bees pollinate flowers while getting nectar)."},
+{q:"Carrying capacity (K) is:",o:["The maximum speed of population growth","The maximum population size an environment can sustain","The number of predators","The birth rate"],a:1,e:"K is the maximum population an environment can sustainably support given available resources."},
+{q:"The leading cause of species extinction today is:",o:["Pollution","Climate change","Habitat destruction","Invasive species"],a:2,e:"Habitat destruction (deforestation, urbanization, agriculture) is the number one driver of biodiversity loss."},
+{q:"Homeostasis is maintained primarily through:",o:["Positive feedback loops","Negative feedback loops","Random fluctuations","Hormonal surges"],a:1,e:"Negative feedback loops detect a change and trigger a response that reverses the change, maintaining stability."},
+{q:"Vaccines work by:",o:["Killing all pathogens in the body","Exposing the immune system to a harmless form of a pathogen to build memory","Increasing body temperature","Strengthening the skin barrier"],a:1,e:"Vaccines prime the adaptive immune system to recognize a pathogen, creating memory cells for faster future responses."},
+{q:"Which body system is responsible for filtering blood and removing waste?",o:["Digestive","Cardiovascular","Urinary","Endocrine"],a:2,e:"The urinary system (kidneys) filters blood, removes waste, and regulates water and electrolyte balance."},
+{q:"B cells of the immune system produce:",o:["Hormones","Antibodies","Red blood cells","Enzymes"],a:1,e:"B cells (B lymphocytes) produce antibodies, proteins that bind to and help neutralize specific pathogens."}
+];
+
+const FD=[
+{cat:"Sci Method",q:"Theory vs. hypothesis?",a:"Hypothesis: testable prediction. Theory: well-tested explanation supported by extensive evidence. A theory is NOT a guess."},
+{cat:"Sci Method",q:"Independent vs. dependent variable?",a:"Independent: what you change. Dependent: what you measure in response."},
+{cat:"Sci Method",q:"Control group?",a:"Receives no treatment. Provides a baseline for comparison."},
+{cat:"Chemistry",q:"Four macromolecules?",a:"Carbohydrates (quick energy), lipids (long-term energy, membranes), proteins (enzymes, structure), nucleic acids (genetic info)."},
+{cat:"Chemistry",q:"Dehydration synthesis vs. hydrolysis?",a:"Dehydration: joins monomers, removes water. Hydrolysis: breaks polymers, adds water."},
+{cat:"Chemistry",q:"Why is water important?",a:"Polar solvent, high specific heat, cohesion/adhesion, ice floats. Essential for all life."},
+{cat:"Chemistry",q:"What do enzymes do?",a:"Proteins that speed up reactions by lowering activation energy. Specific to their substrate. Reusable. Denatured by extreme heat/pH."},
+{cat:"Chemistry",q:"Covalent vs. ionic bonds?",a:"Covalent: share electrons (most biological molecules). Ionic: transfer electrons (like NaCl)."},
+{cat:"Cells",q:"Cell theory (3 parts)?",a:"All living things are made of cells. Cell is basic unit of life. All cells from pre-existing cells."},
+{cat:"Cells",q:"Prokaryotic vs. eukaryotic?",a:"Prokaryotes: no nucleus, small, bacteria. Eukaryotes: membrane-bound nucleus, organelles, plants/animals/fungi."},
+{cat:"Cells",q:"Mitochondria function?",a:"Cellular respiration: converts glucose to ATP. 'Powerhouse of the cell.'"},
+{cat:"Cells",q:"Chloroplast function?",a:"Photosynthesis: converts light energy to glucose. Found in plants and algae only."},
+{cat:"Cells",q:"Phospholipid bilayer?",a:"Two layers of phospholipids. Hydrophilic heads face water, hydrophobic tails face inward. Makes membrane selectively permeable."},
+{cat:"Cells",q:"Diffusion vs. osmosis vs. active transport?",a:"Diffusion: molecules high to low (no energy). Osmosis: water to higher solute (no energy). Active: against gradient (ATP needed)."},
+{cat:"Cells",q:"Hypo/iso/hypertonic?",a:"Hypo: cell swells (water in). Iso: no net change. Hyper: cell shrinks (water out)."},
+{cat:"Energy",q:"Photosynthesis equation?",a:"6CO2 + 6H2O + light -> C6H12O6 + 6O2. In chloroplasts."},
+{cat:"Energy",q:"Respiration equation?",a:"C6H12O6 + 6O2 -> 6CO2 + 6H2O + ~36-38 ATP. In mitochondria."},
+{cat:"Energy",q:"How are photosynthesis and respiration related?",a:"They are reverse processes. Products of one are reactants of the other. Photosynthesis stores energy; respiration releases it."},
+{cat:"Energy",q:"Fermentation?",a:"Anaerobic (no O2). Only 2 ATP. Alcoholic: ethanol + CO2 (yeast). Lactic acid: lactic acid (muscles)."},
+{cat:"DNA",q:"DNA base pairing?",a:"A-T, G-C. In RNA: A-U, G-C."},
+{cat:"DNA",q:"Central dogma?",a:"DNA -> RNA -> Protein. Replication (DNA copies), transcription (DNA to mRNA), translation (mRNA to protein)."},
+{cat:"DNA",q:"What is a gene?",a:"Section of DNA that codes for a specific protein."},
+{cat:"DNA",q:"What is a codon?",a:"Three-base sequence on mRNA coding for one amino acid. Start: AUG. Stop: UAA, UAG, UGA."},
+{cat:"DNA",q:"What is a mutation?",a:"Change in DNA sequence. Can alter, improve, or disable the resulting protein."},
+{cat:"Cell Division",q:"Mitosis result?",a:"2 identical diploid (2n) cells. For growth and repair."},
+{cat:"Cell Division",q:"Meiosis result?",a:"4 unique haploid (n) cells. For gametes (sex cells)."},
+{cat:"Cell Division",q:"Sources of genetic variation in meiosis?",a:"Crossing over, independent assortment, random fertilization."},
+{cat:"Genetics",q:"Genotype vs. phenotype?",a:"Genotype: allele combination (TT, Tt, tt). Phenotype: observable trait (tall, short)."},
+{cat:"Genetics",q:"Dominant vs. recessive?",a:"Dominant: expressed with 1 or 2 copies. Recessive: only expressed when homozygous (tt)."},
+{cat:"Genetics",q:"Monohybrid cross Tt x Tt?",a:"Phenotypic ratio 3:1. Genotypic ratio 1:2:1."},
+{cat:"Genetics",q:"Incomplete dominance?",a:"Heterozygote is a blend. Red x White = Pink."},
+{cat:"Genetics",q:"Codominance?",a:"Both alleles fully expressed. AB blood type."},
+{cat:"Genetics",q:"Sex-linked traits?",a:"Gene on X chromosome. Males (XY) express with one copy. Examples: color blindness, hemophilia."},
+{cat:"Evolution",q:"What is evolution?",a:"Change in allele frequencies in a population over time."},
+{cat:"Evolution",q:"Four requirements of natural selection?",a:"Variation, heritability, overproduction, differential survival/reproduction."},
+{cat:"Evolution",q:"Natural selection acts on?",a:"Phenotypes. Individuals don't evolve; populations do."},
+{cat:"Evolution",q:"Homologous vs. analogous structures?",a:"Homologous: same structure, different function (common ancestor). Analogous: different structure, same function (convergent evolution)."},
+{cat:"Evolution",q:"Five types of evidence for evolution?",a:"Fossils, comparative anatomy, embryology, molecular biology (DNA), biogeography."},
+{cat:"Ecology",q:"10% rule?",a:"Only ~10% of energy transfers between trophic levels. 90% lost as heat."},
+{cat:"Ecology",q:"Producer vs. consumer vs. decomposer?",a:"Producer: makes food (plants). Consumer: eats others. Decomposer: breaks down dead matter (bacteria, fungi)."},
+{cat:"Ecology",q:"Mutualism vs. parasitism vs. commensalism?",a:"Mutualism: +/+. Parasitism: +/-. Commensalism: +/0."},
+{cat:"Ecology",q:"Carrying capacity (K)?",a:"Maximum population an environment can sustain. Logistic growth (S-curve) levels off at K."},
+{cat:"Ecology",q:"Biggest cause of extinction?",a:"Habitat destruction. Also: climate change, pollution, overexploitation, invasive species."},
+{cat:"Human Body",q:"Homeostasis?",a:"Maintaining a stable internal environment. Primarily through negative feedback loops."},
+{cat:"Human Body",q:"Negative feedback example?",a:"Body temp rises -> brain signals sweating -> temp drops back to normal."},
+{cat:"Human Body",q:"Innate vs. adaptive immunity?",a:"Innate: nonspecific (skin, inflammation). Adaptive: specific (B cells make antibodies, T cells kill infected cells)."},
+{cat:"Human Body",q:"How do vaccines work?",a:"Expose immune system to harmless pathogen form. Builds memory cells for faster future response."},
+{cat:"Human Body",q:"Nervous vs. endocrine system?",a:"Nervous: fast, electrical signals. Endocrine: slower, hormones through blood, long-lasting effects."}
+];
+
+const SA=[
+{q:"Compare and contrast the four macromolecules: carbohydrates, lipids, proteins, and nucleic acids. Include building blocks and functions.",
+concepts:[
+  {term:"carbohydrates",synonyms:["carbohydrat","sugar","monosaccharide","glucose","energy"],weight:2},
+  {term:"lipids",synonyms:["lipid","fat","fatty acid","membrane","long.term"],weight:2},
+  {term:"proteins",synonyms:["protein","amino acid","enzyme"],weight:2},
+  {term:"nucleic acids",synonyms:["nucleic","nucleotide","dna","rna","genetic"],weight:2},
+  {term:"dehydration/hydrolysis",synonyms:["dehydration","hydrolysis","water"],weight:1}
+],model:"Carbohydrates (monosaccharides) provide quick energy and structural support. Lipids (fatty acids + glycerol) store long-term energy and form cell membranes. Proteins (amino acids) function as enzymes, structural components, and transport molecules. Nucleic acids (nucleotides) store genetic information (DNA and RNA). All are built by dehydration synthesis and broken by hydrolysis."},
+{q:"Explain the relationship between photosynthesis and cellular respiration. Include where each occurs, the equations, and how they connect.",
+concepts:[
+  {term:"photosynthesis in chloroplasts",synonyms:["chloroplast","photosynthes"],weight:2},
+  {term:"respiration in mitochondria",synonyms:["mitochondri","respirat"],weight:2},
+  {term:"equations/reactants/products",synonyms:["co2.*h2o","glucose.*oxygen","c6h12o6","atp"],weight:2},
+  {term:"reverse/opposite processes",synonyms:["reverse","opposite","complement","products.*reactants"],weight:2},
+  {term:"energy stored/released",synonyms:["store.*energy","release.*energy","light.*chemical"],weight:1}
+],model:"Photosynthesis (in chloroplasts): 6CO2 + 6H2O + light -> glucose + 6O2. It stores light energy as chemical energy in glucose. Cellular respiration (in mitochondria): glucose + 6O2 -> 6CO2 + 6H2O + ATP. It releases that stored energy as ATP. They are reverse processes: the products of photosynthesis are the reactants of respiration, and vice versa. Together they cycle carbon and oxygen through ecosystems."},
+{q:"Describe the central dogma of molecular biology. What happens during replication, transcription, and translation?",
+concepts:[
+  {term:"replication: DNA to DNA",synonyms:["replication","dna.*cop","dna.*dna"],weight:2},
+  {term:"transcription: DNA to mRNA",synonyms:["transcription","dna.*rna","dna.*mrna"],weight:2},
+  {term:"translation: mRNA to protein",synonyms:["translation","mrna.*protein","ribosome","amino acid"],weight:2},
+  {term:"nucleus and ribosome locations",synonyms:["nucleus","ribosome","cytoplasm"],weight:1},
+  {term:"codon/genetic code",synonyms:["codon","aug","start","stop","three.*base"],weight:1}
+],model:"The central dogma: DNA -> RNA -> protein. Replication copies DNA before cell division (DNA to DNA, in the nucleus). Transcription reads a gene and produces a complementary mRNA (DNA to mRNA, in the nucleus). Translation reads the mRNA at the ribosome and assembles amino acids into a protein. Codons (three-base sequences) specify amino acids. AUG starts translation; UAA/UAG/UGA stop it."},
+{q:"Compare mitosis and meiosis. Include the purpose, number of divisions, daughter cells produced, and how genetic variation is introduced.",
+concepts:[
+  {term:"mitosis: 2 identical diploid",synonyms:["mitosis.*2","mitosis.*identical","mitosis.*diploid","growth.*repair"],weight:2},
+  {term:"meiosis: 4 unique haploid",synonyms:["meiosis.*4","meiosis.*haploid","meiosis.*unique","gamete"],weight:2},
+  {term:"divisions: 1 vs. 2",synonyms:["one division","two division","1 division","2 division","meiosis i.*ii"],weight:1},
+  {term:"genetic variation sources",synonyms:["crossing over","independent assortment","random fertiliz"],weight:2}
+],model:"Mitosis: 1 division, produces 2 genetically identical diploid cells for growth and repair. Meiosis: 2 divisions, produces 4 genetically unique haploid gametes for sexual reproduction. Genetic variation in meiosis comes from crossing over (prophase I), independent assortment (metaphase I), and random fertilization."},
+{q:"Explain how natural selection works. What are the four requirements, and how does it change a population over time?",
+concepts:[
+  {term:"variation",synonyms:["variation","differ","diverse"],weight:2},
+  {term:"heritable",synonyms:["heritab","inherited","genetic","passed"],weight:2},
+  {term:"overproduction",synonyms:["overproduc","more offspring","not all survive"],weight:2},
+  {term:"differential survival",synonyms:["differential","better suited","fitness","advantag","surviv.*reproduc"],weight:2},
+  {term:"population change",synonyms:["allele frequenc","population.*change","population.*evolv","more common"],weight:1}
+],model:"Natural selection requires: 1) variation in the population, 2) some variation is heritable (genetic), 3) overproduction of offspring, 4) differential survival and reproduction (individuals with advantageous traits leave more offspring). Over generations, favorable alleles become more common, changing the genetic makeup of the population. Natural selection acts on phenotypes, and populations evolve, not individuals."},
+{q:"Describe the flow of energy through an ecosystem. Include trophic levels, the 10% rule, and why food chains are typically short.",
+concepts:[
+  {term:"producers/autotrophs",synonyms:["producer","autotroph","plant","photosynthe"],weight:2},
+  {term:"consumers/trophic levels",synonyms:["consumer","trophic","herbivore","carnivore","primary.*secondary"],weight:2},
+  {term:"10% rule",synonyms:["10%","10 percent","ten percent"],weight:2},
+  {term:"energy lost as heat",synonyms:["heat","lost.*heat","metaboli","90%"],weight:2},
+  {term:"short food chains",synonyms:["short","few.*level","limited","not enough energy"],weight:1}
+],model:"Energy flows one direction: sun -> producers (plants) -> primary consumers (herbivores) -> secondary consumers -> tertiary consumers. Decomposers recycle nutrients at every level. The 10% rule: only ~10% of energy passes to the next trophic level; ~90% is lost as heat through metabolism. This limits food chains to 4-5 levels because insufficient energy remains to support additional levels."},
+{q:"What is homeostasis? How does the body maintain it? Give an example of a negative feedback loop.",
+concepts:[
+  {term:"stable internal environment",synonyms:["stable","internal environment","balance","steady state","homeostasis"],weight:2},
+  {term:"negative feedback",synonyms:["negative feedback","reverse","counteract","restore"],weight:2},
+  {term:"sensor/control/effector",synonyms:["sensor","control center","effector","detect","respond","brain"],weight:1},
+  {term:"example",synonyms:["temperature","sweat","shiver","blood sugar","insulin","thermostat"],weight:2}
+],model:"Homeostasis is maintaining a stable internal environment despite external changes. The body primarily uses negative feedback loops: a sensor detects a change from a set point, a control center (often the brain) processes the signal, and an effector carries out a response that reverses the change. Example: when body temperature rises, the brain signals sweat glands to produce sweat, which evaporates and cools the body back to ~37 degrees C."},
+{q:"Compare innate and adaptive immunity. How do vaccines work to protect against disease?",
+concepts:[
+  {term:"innate: nonspecific",synonyms:["innate","nonspecific","skin","mucus","inflammat","fever","barrier"],weight:2},
+  {term:"adaptive: specific",synonyms:["adaptive","specific","lymphocyte","b cell","t cell"],weight:2},
+  {term:"antibodies",synonyms:["antibod","b cell.*produc"],weight:1},
+  {term:"memory cells",synonyms:["memory","remember","faster.*response","second.*exposure"],weight:2},
+  {term:"vaccines",synonyms:["vaccine","harmless.*pathogen","weakened","dead.*pathogen","immuniz"],weight:2}
+],model:"Innate immunity is the first line of defense and is nonspecific: skin, mucous membranes, inflammation, and fever. Adaptive immunity is specific: B cells produce antibodies against particular pathogens, and T cells destroy infected cells. After an infection, memory cells remain so the response is faster upon re-exposure. Vaccines work by exposing the immune system to a harmless or weakened form of a pathogen, triggering the production of memory cells without causing disease. This prepares the body to fight the real pathogen quickly if encountered later."}
+];
+
+let qI=0,qS=0,qDone=false;
+function qRender(){const d=QD[qI];let h='<div class="quiz-question"><p>'+(qI+1)+'. '+d.q+'</p><div class="quiz-options">';d.o.forEach((o,i)=>{h+='<label id="qo'+i+'"><input type="radio" name="q" value="'+i+'"> '+o+'</label>';});h+='</div><div class="quiz-explanation" id="qExp">'+d.e+'</div></div>';document.getElementById('qArea').innerHTML=h;document.getElementById('qCur').textContent=qI+1;document.getElementById('qTot').textContent=QD.length;document.getElementById('qBar').style.width=(qI/QD.length*100)+'%';document.getElementById('qSubmit').style.display='inline-block';document.getElementById('qNext').style.display='none';qDone=false;}
+function qCheck(){if(qDone)return;const s=document.querySelector('input[name="q"]:checked');if(!s)return;qDone=true;const v=+s.value,d=QD[qI];document.querySelectorAll('.quiz-options label').forEach(l=>l.style.pointerEvents='none');if(v===d.a){qS++;document.getElementById('qo'+v).classList.add('correct');}else{document.getElementById('qo'+v).classList.add('incorrect');document.getElementById('qo'+d.a).classList.add('correct');}document.getElementById('qScore').textContent=qS;document.getElementById('qExp').style.display='block';document.getElementById('qSubmit').style.display='none';if(qI<QD.length-1)document.getElementById('qNext').style.display='inline-block';else{document.getElementById('qBar').style.width='100%';setTimeout(()=>{const p=Math.round(qS/QD.length*100);document.getElementById('qArea').innerHTML='<div class="quiz-result"><h3>Quiz Complete!</h3><p style="font-size:1.2rem;margin-bottom:.5rem">'+qS+' / '+QD.length+' ('+p+'%)</p><p style="color:var(--text-muted)">'+(p>=80?'Excellent work!':p>=60?'Good effort. Review the sections you missed.':'Keep studying and try again.')+'</p></div>';document.getElementById('qNext').style.display='none';},1200);}}
+function qAdvance(){qI++;qRender();}
+let fcF=[...FD],fcI=0;
+function fcRenderFilters(){const cats=[...new Set(FD.map(c=>c.cat))];let h='<button class="fc-filter-btn active" onclick="fcFilter(\'all\',this)">All</button>';cats.forEach(c=>{h+='<button class="fc-filter-btn" onclick="fcFilter(\''+c+'\',this)">'+c+'</button>';});document.getElementById('fcFilters').innerHTML=h;}
+function fcFilter(cat,btn){fcF=cat==='all'?[...FD]:FD.filter(c=>c.cat===cat);fcI=0;document.querySelectorAll('.fc-filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');fcRender();}
+function fcRender(){if(!fcF.length)return;const c=fcF[fcI];document.getElementById('fcCat').textContent=c.cat;document.getElementById('fcQ').textContent=c.q;document.getElementById('fcA').textContent=c.a;document.getElementById('fcIdx').textContent=fcI+1;document.getElementById('fcTot').textContent=fcF.length;document.getElementById('fcCard').classList.remove('flipped');}
+function fcFlip(){document.getElementById('fcCard').classList.toggle('flipped');}
+function fcNext(){fcI=(fcI+1)%fcF.length;fcRender();}
+function fcPrev(){fcI=(fcI-1+fcF.length)%fcF.length;fcRender();}
+function saRender(){let h='';SA.forEach((item,i)=>{h+='<div class="sa-question"><p class="sa-prompt">'+(i+1)+'. '+item.q+'</p><textarea id="saI'+i+'" placeholder="Type your answer here..."></textarea><div class="sa-feedback" id="saFb'+i+'"><div class="sa-score-bar"><div class="sa-score-fill" id="saFill'+i+'"></div></div><div class="sa-score-text" id="saPct'+i+'"></div><div class="sa-tags" id="saTags'+i+'"></div><button class="sa-model-toggle" onclick="saToggle('+i+')">Show Model Answer</button><div class="sa-model-answer" id="saModel'+i+'">'+item.model+'</div></div></div>';});document.getElementById('saArea').innerHTML=h;}
+function saGradeAll(){SA.forEach((item,i)=>{const input=document.getElementById('saI'+i).value.toLowerCase();let earned=0,total=0,tags='';const wc=input.trim().split(/\s+/).filter(w=>w).length;item.concepts.forEach(c=>{total+=c.weight;let found=false;for(let s of c.synonyms){if(s.includes('.*')){try{if(new RegExp(s,'i').test(input)){found=true;break;}}catch(e){}}else if(input.includes(s.toLowerCase())){found=true;break;}}if(found){earned+=c.weight;tags+='<span class="sa-tag hit">'+c.term+'</span>';}else{tags+='<span class="sa-tag miss">'+c.term+'</span>';}});let bonus=0;if(wc>40)bonus=Math.min(.1,((wc-40)/100)*.1);let pct=Math.min(100,Math.round((earned/total+bonus)*100));const fill=document.getElementById('saFill'+i);fill.style.width=pct+'%';fill.style.background=pct>=70?'#4caf50':pct>=40?'#ff9800':'#e57373';document.getElementById('saPct'+i).textContent=pct+'% concept match';document.getElementById('saTags'+i).innerHTML=tags;document.getElementById('saFb'+i).style.display='block';});}
+function saToggle(i){const el=document.getElementById('saModel'+i);el.style.display=el.style.display==='block'?'none':'block';}
+window.addEventListener('scroll',()=>{document.getElementById('btt').classList.toggle('visible',window.scrollY>400);});
+qRender();fcRenderFilters();fcRender();saRender();
+</script>
+</div>
+</body>
+</html>
