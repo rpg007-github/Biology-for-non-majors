@@ -24,11 +24,42 @@
     .sa-question{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-light)}.sa-question:last-child{border-bottom:none}.sa-question p.sa-prompt{font-weight:600;margin-bottom:.75rem;font-size:1.02rem}.sa-question textarea{width:100%;min-height:80px;padding:.75rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:.95rem;resize:vertical;transition:border-color .2s}.sa-question textarea:focus{outline:none;border-color:var(--accent)}.sa-feedback{margin-top:.75rem;display:none}.sa-score-bar{height:10px;background:var(--border-light);border-radius:5px;overflow:hidden;margin-bottom:.6rem}.sa-score-fill{height:100%;border-radius:5px;transition:width .5s}.sa-score-text{font-family:'JetBrains Mono',monospace;font-size:.85rem;margin-bottom:.5rem}.sa-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem}.sa-tag{padding:.2rem .65rem;border-radius:4px;font-size:.8rem;font-weight:500}.sa-tag.hit{background:#e8f5e9;color:#2e7d32}.sa-tag.miss{background:#f0f0f0;color:#888}.sa-model-toggle{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.9rem;font-family:'Source Sans 3',sans-serif;font-weight:500;padding:0}.sa-model-toggle:hover{text-decoration:underline}.sa-model-answer{margin-top:.5rem;padding:.75rem 1rem;background:#edf1f8;border-radius:8px;font-size:.9rem;display:none;line-height:1.65}
     .back-to-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);opacity:0;transition:opacity .3s;z-index:100}.back-to-top.visible{opacity:1}
     @media(max-width:768px){.container{padding:1.25rem 1rem 3rem}.section-card{padding:1.5rem}.toc-grid{grid-template-columns:1fr}.fact-table{font-size:.85rem}.fact-table th,.fact-table td{padding:.4rem .5rem}.fc-card-wrapper{height:260px}}
-  </style>
+  
+/* ─── WCAG 2.1 AA: Visible focus indicators ─── */
+:focus-visible {
+  outline: 3px solid #005fcc !important;
+  outline-offset: 2px !important;
+}
+.tab-btn:focus-visible, .nav-btn:focus-visible {
+  outline: 3px solid #005fcc !important;
+  outline-offset: 2px !important;
+}
+/* ─── Skip link ─── */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #005fcc;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 6px 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+</style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="hero"><h1>Biology for Non-Majors</h1><div class="subtitle">Essential Study Reference</div><div class="tagline">The facts you just know</div></div>
-<div class="container">
+<div class="container" id="main-content" role="main">
 <div class="toc"><h2>Table of Contents</h2><div class="toc-grid">
   <a href="#sci-method"><span class="toc-num">01</span>Science &amp; the Scientific Method</a>
   <a href="#chemistry"><span class="toc-num">02</span>Chemistry of Life</a>
@@ -407,7 +438,7 @@ qRender();fcRenderFilters();fcRender();saRender();
 </script>
 </div>
   <div style="max-width: 800px; margin: 40px auto; padding: 20px 30px; background: #fff8e1; border-left: 4px solid #f9a825; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #555;">
-  <div style="font-weight: bold; font-size: 15px; margin-bottom: 10px;">⚠️ Important Notice</div>
+  <div style="font-weight: bold; font-size: 15px; margin-bottom: 10px;"><span aria-hidden="true">⚠️</span> Important Notice</div>
   <p style="margin: 0 0 10px 0;">These study resources are provided free of charge for educational purposes only. They are intended as supplemental study aids and should not be used as a substitute for your course textbooks, lecture materials, or the guidance of your instructors.</p>
   <p style="margin: 0 0 10px 0;">While every effort has been made to ensure accuracy, this content may contain errors, omissions, or information that is out of date. Science is constantly evolving, and material that was accurate at the time of writing may no longer reflect current understanding. Always verify important facts, formulas, and concepts against your official course materials.</p>
   <p style="margin: 0 0 10px 0;">No guarantees are made regarding the completeness, accuracy, or reliability of any information presented on these sites. Use at your own discretion. If you spot an error, we appreciate you letting us know so it can be corrected.</p>
